@@ -12,8 +12,12 @@ ShellBot.username
 menu() {
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="<b>•🔹• BOT TESTE DISPONIVEL •🔹•</b>\n"
+        msg+="<b>OLÁ BEM VINDO BOT TESTE JK FASTNET</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+	msg+="LEIA ATENTAMENTE TODAS INFORMAÇÕES"
+	msg+=" "
+	msg+="GERE SEU TESTE GRATIS AGORA MESMO!"
+	msg+="TERMINANDO SEU TESTE FAÇA SUA COMPRA!"
         msg+="1 ACESSO SSH R$ 15/Mês"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
@@ -49,7 +53,7 @@ rm -rf /etc/VPSManager/userteste/$usuario.sh" > /etc/VPSManager/userteste/$usuar
     echo ${callback_query_from_id} >> lista
     # - ENVIA O SSH
     ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-    --text "$(echo -e "✅ <b>Criado com sucesso</b> ✅\n\nSERVIDOR: BR05\nUSUARIO: <code>$usuario</code>\nSENHA: <code>$senha</code>\n\n⏳ Expira em: $tempo Hora")" \
+    --text "$(echo -e "✅ <b>Criado com sucesso</b> ✅\n\nSERVIDOR: BR02\nUSUARIO: <code>$usuario</code>\nSENHA: <code>$senha</code>\n\n⏳ Expira em: $tempo Hora")" \
     --parse_mode html
     return 0
 }
@@ -72,12 +76,12 @@ pix () {
 
 unset botao1
 botao1=''
-ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text 'CRIAR SEU TESTE' --callback_data 'gerarssh'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'APP ATLANTUS' --callback_data '2' --url 'https://www.mediafire.com/file/l83m8dehzfwt68u/JKINFINITENETECL2.apk/file' # LINK APP
-ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text 'APP ECLIPSE' --callback_data '2' --url 'https://www.mediafire.com/file/uzzovui21gcu5wp/JKINFINITENETatl2.apk/file' # LINK APP
+ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '🟢CRIAR SEU TESTE🟢' --callback_data 'gerarssh'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '📥APP ATLANTUS📥' --callback_data '2' --url 'https://www.mediafire.com/file/l83m8dehzfwt68u/JKINFINITENETECL2.apk/file' # LINK APP
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '📥APP ECLIPSE📥' --callback_data '2' --url 'https://www.mediafire.com/file/uzzovui21gcu5wp/JKINFINITENETatl2.apk/file' # LINK APP
 ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text 'ENVIE SEU COMPROVANTE' --callback_data '3' --url 'https://t.me/jkinfintenet' # LINK TELEGRAM
-ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text 'PIX PARA PAGAMENTO' --callback_data 'pay'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text 'PICPAY' --callback_data '4' --url 'https://picpay.me/jkinfintenet/15.0' # LINK PICPAY
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '💵PIX PARA PAGAMENTO🛒' --callback_data 'pay'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '💵PICPAY🛒' --callback_data '4' --url 'https://picpay.me/jkinfintenet/15.0' # LINK PICPAY
 
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function pix --callback_data pay
