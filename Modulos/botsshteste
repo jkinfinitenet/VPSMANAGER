@@ -12,11 +12,12 @@ ShellBot.username
 menu() {
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="<b>OLÁ BEM VINDO BOT TESTE JK FASTNET</b>\n"
+        msg+="<b>BEM VINDO AO BOT TESTE JK FASTNET</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
 	msg+="LEIA ATENTAMENTE TODAS INFORMAÇÕES"
 	msg+="\n\n "
 	msg+="GERE SEU TESTE GRATIS AGORA MESMO!"
+	msg+="\n\n "
 	msg+="TERMINANDO SEU TESTE FAÇA SUA COMPRA!"
         msg+="1 ACESSO SSH R$ 15/Mês"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
